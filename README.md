@@ -65,4 +65,4 @@
   
   1. 激活虚拟环境<br />![alt pic.png](./img//file_2-4_1_1.png)<br />![alt pic.png](./img//file_2-4_1_2.png)
   
-  2. 输入“jupyter notebook”打开Jupyter Notebook<br />![alt pic.png](./img//file_2-4_2_1.png)<br />![alt pic.png](../04.Lennon/img//file_2-4_2_2.png)<br />![alt pic.png](./img//file_2-4_2_3.png)
+  2. 输入“jupyter notebook”打开Jupyter Notebook<br />![alt pic.png](./img//file_2-4_2_1.png)<br />![alt pic.png](./img//file_2-4_2_2.png)<br />![alt pic.png](./img//file_2-4_2_3.png)
