@@ -35,8 +35,10 @@ jobs:
           FILES_UPDATED=$(echo "$FILES_UPDATED" | sed 's/"//g') # 删除文件名中的所有双引号
           echo "FILES_UPDATED: $FILES_UPDATED"
 
-          MESSAGE="## [GitHub 仓库更新](https://github.com/DamnPapacito/YT-Nolan)\n\n- - -\n\n- ***Time***: ${COMMIT_DATE}\n\n- ***Author***: ${COMMIT_AUTHOR}\n\n- ***Commit SHA***: ${COMMIT_SHA}\n\n- - -\n\n- ***Files Updated***:\n\`\`\`\n${FILES_UPDATED}\n\`\`\`\n\`\`\`" # 构建发送到钉钉的消息内容，使用 Markdown 格式
+          MESSAGE="## [GitHub Nolan](https://github.com/DamnPapacito/YT-Nolan)\n\n- - -\n\n- ***Time***: ${COMMIT_DATE}\n\n- ***Author***: ${COMMIT_AUTHOR}\n\n- ***Commit SHA***: ${COMMIT_SHA}\n\n- - -\n\n- ***Files Updated***:\n\`\`\`\n${FILES_UPDATED}\n\`\`\`\n\`\`\`" # 构建发送到钉钉的消息内容，使用 Markdown 格式
 
-          curl -X POST https://oapi.dingtalk.com/robot/send?access_token=79d97a0de5f5c45b2a35e41cf192643dc6e8c9068bc1f9d48d67a5d1011c9b9b \
+          curl -X POST https://oapi.dingtalk.com/robot/send?access_token=30ebb71961d5201fa4e691c682d4bfb6028bf436054abf467326869e1f4596e9 \
           -H "Content-Type: application/json" \
           -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification", "text": "'"${MESSAGE}"'"}}' # 通过 curl 命令向钉钉机器人发送消息请求
+
+        
