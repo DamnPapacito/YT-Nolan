@@ -33,6 +33,7 @@ jobs:
           FILES_UPDATED=$(git diff-tree --no-commit-id --diff-filter=AMR --name-only -r $COMMIT_SHA) # 获取最新提交中修改、添加、重命名的文件
           FILES_UPDATED=$(printf "$FILES_UPDATED") # 确保文件列表格式正确
           FILES_UPDATED=$(echo "$FILES_UPDATED" | sed 's/"//g') # 删除文件名中的所有双引号
+          FILES_UPDATED=$(echo "$FILES_UPDATED" | grep -v 'img/') # 删除包含 "img/" 的文件
           echo "FILES_UPDATED: $FILES_UPDATED"
 
           MESSAGE="## [GitHub Nolan](https://github.com/DamnPapacito/YT-Nolan)\n\n- - -\n\n- ***Time***: ${COMMIT_DATE}\n\n- ***Author***: ${COMMIT_AUTHOR}\n\n- ***Commit SHA***: ${COMMIT_SHA}\n\n- - -\n\n- ***Files Updated***:\n\`\`\`\n${FILES_UPDATED}\n\`\`\`\n\`\`\`" # 构建发送到钉钉的消息内容，使用 Markdown 格式
