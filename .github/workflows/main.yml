@@ -42,4 +42,7 @@ jobs:
           -H "Content-Type: application/json" \
           -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification", "text": "'"${MESSAGE}"'"}}' # 通过 curl 命令向钉钉机器人发送消息请求
 
+          curl -X POST https://oapi.dingtalk.com/robot/send?access_token=826a5b2c65e4f9ce1ddac948d75686fde5efbdb8a16e58a896f734f77ecb6d17 \
+          -H "Content-Type: application/json" \
+          -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification", "text": "'"${MESSAGE}"'"}}' # 通过 curl 命令向钉钉机器人发送消息请求
         
